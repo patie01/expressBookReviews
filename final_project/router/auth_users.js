@@ -1,14 +1,8 @@
 const express = require('express');
 const jwt = require('jsonwebtoken');
-let books = require("./booksdb.js");
+const { users, books } = require("./data.js"); // Use shared data module
 const regd_users = express.Router();
 
-let users = [
-    {
-        "username": "asif",
-        "password": "12345"
-    }
-];
 const jwtSecret = '244d0b97c61cb978567e348a15fc8cd5c3c5791af982ccae88db48383bc3c273';
 
 const isValid = (username) => { //returns boolean
@@ -70,4 +64,3 @@ regd_users.delete("/auth/review/:isbn", (req, res) => {
 
 module.exports.authenticated = regd_users;
 module.exports.isValid = isValid;
-module.exports.users = users;

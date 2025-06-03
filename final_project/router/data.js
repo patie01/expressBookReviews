@@ -1,3 +1,7 @@
+// Shared data module for users and books
+
+let users = [];
+
 let books = {
     "1234": {
         title: "1984",
@@ -21,4 +25,4 @@ let books = {
     10: { author: "Samuel Beckett", title: "Molloy, Malone Dies, The Unnamable, the trilogy", reviews: {} }
 };
 
-// This file is now deprecated. Use data.js for books.
+module.exports = { users, books };
