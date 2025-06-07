@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const { users, books } = require("../index");
+const { users, books } = require("../final_project/router/data.js");
 
 function isAuthenticated(req, res, next) {
   const { username } = req.body;
